@@ -6,7 +6,7 @@
             <div class="card-body">
                 <h3>{{ $post->title }}</h3>
                 <p>{{ $post->content }}</p>
-                <a href="{{ route('blog.show', $post) }}" class="btn btn-primary">View Post</a>
+                <a href="{{ route('blog.edit', $post) }}" class="btn btn-primary">View Post</a>
             </div>
         </div>
     @endforeach
