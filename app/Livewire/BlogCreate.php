@@ -14,6 +14,20 @@ class BlogCreate extends Component
         'content' => 'required|string',
     ];
 
+    public function createPost()
+    {
+        $this->validate();
+
+        BlogPost::create([
+            'title' => $this->title,
+            'content' => $this->content,
+        ]);
+
+        session()->flash('message', 'Blog post created successfully.');
+
+        $this->reset(['title', 'content']);
+    }
+
     
     public function render()
     {
