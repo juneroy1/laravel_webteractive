@@ -3,14 +3,14 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-
+use App\Models\BlogPost;
 class BlogCreate extends Component
 {
     public $title;
     public $content;
 
     protected $rules = [
-        'title' => 'required|string|max:255',
+        'title' => 'required|string|max:255|min:2',
         'content' => 'required|string',
     ];
 

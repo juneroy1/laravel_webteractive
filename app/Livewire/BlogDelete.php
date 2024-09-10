@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-
+use App\Models\BlogPost;
 class BlogDelete extends Component
 {
     public $postId;
