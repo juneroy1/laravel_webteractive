@@ -25,6 +25,7 @@ return new class extends Migration
     {
         Schema::table('blog_posts', function (Blueprint $table) {
             //
+             $table->dropColumn(['upvotes', 'downvotes']);
         });
     }
 };
