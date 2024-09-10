@@ -1,6 +1,10 @@
 <div>
     <h1>All Blog Posts</h1>
-
+    @if (session()->has('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
     @foreach($posts as $post)
         <div class="card mt-3">
             <div class="card-body">
