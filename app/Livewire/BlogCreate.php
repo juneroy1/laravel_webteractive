@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\BlogPost;
+use Illuminate\Support\Facades\Auth;
 class BlogCreate extends Component
 {
     public $title;
