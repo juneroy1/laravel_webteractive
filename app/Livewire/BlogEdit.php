@@ -16,9 +16,9 @@ class BlogEdit extends Component
         'content' => 'required|string',
     ];
 
-    public function mount($postId)
+    public function mount($id)
     {
-        $post = BlogPost::findOrFail($postId);
+        $post = BlogPost::findOrFail($id);
         $this->postId = $post->id;
         $this->title = $post->title;
         $this->content = $post->content;
