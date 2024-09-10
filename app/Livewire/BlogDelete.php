@@ -17,6 +17,11 @@ class BlogDelete extends Component
         return redirect()->route('blog.index');
     }
 
+    public function mount($id)
+    {
+        $this->postId = $id;
+    }
+
     public function render()
     {
         return view('livewire.blog-delete');
