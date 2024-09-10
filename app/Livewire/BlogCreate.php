@@ -17,10 +17,11 @@ class BlogCreate extends Component
     public function createPost()
     {
         $this->validate();
-
+        $userId = Auth::id();
         BlogPost::create([
             'title' => $this->title,
             'content' => $this->content,
+            'user_id' => $userId,
         ]);
 
         session()->flash('message', 'Blog post created successfully.');
