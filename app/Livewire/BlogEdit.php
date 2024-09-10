@@ -24,6 +24,19 @@ class BlogEdit extends Component
         $this->content = $post->content;
     }
 
+    public function updatePost()
+    {
+        $this->validate();
+
+        $post = BlogPost::findOrFail($this->postId);
+        $post->update([
+            'title' => $this->title,
+            'content' => $this->content,
+        ]);
+
+        session()->flash('message', 'Blog post updated successfully.');
+    }
+
     public function render()
     {
         return view('livewire.blog-edit');
