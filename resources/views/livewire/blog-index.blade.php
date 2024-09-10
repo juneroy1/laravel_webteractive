@@ -13,6 +13,8 @@
                 <a href="{{ route('blog.edit', $post->id) }}" class="btn btn-primary">View Post</a>
                 
                 <livewire:blog-delete :postId="$post->id" :key="$post->id" />
+                <!-- Voting system -->
+                <livewire:vote :post="$post" :key="$post->id" />
             </div>
         </div>
     @endforeach
