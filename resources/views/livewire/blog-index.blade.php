@@ -5,6 +5,7 @@
             {{ session('message') }}
         </div>
     @endif
+     <a href="{{ route('blog.create') }}" class="btn btn-primary">Create New</a>
     @foreach($posts as $post)
         <div class="card mt-3">
             <div class="card-body">
@@ -18,4 +19,8 @@
             </div>
         </div>
     @endforeach
+
+    <div class="mt-4">
+        {{ $posts->links() }} <!-- Pagination links -->
+    </div>
 </div>
