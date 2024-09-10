@@ -8,6 +8,12 @@ class BlogCreate extends Component
 {
     public $title;
     public $content;
+
+    protected $rules = [
+        'title' => 'required|string|max:255',
+        'content' => 'required|string',
+    ];
+
     
     public function render()
     {
