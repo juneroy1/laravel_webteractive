@@ -12,6 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('blog_posts', function (Blueprint $table) {
+            $table->integer('upvotes')->default(0);
+            $table->integer('downvotes')->default(0);
             //
         });
     }
