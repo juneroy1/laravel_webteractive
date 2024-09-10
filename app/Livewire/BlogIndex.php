@@ -11,7 +11,7 @@ class BlogIndex extends Component
     public function render()
     {
         return view('livewire.blog-index', [
-            'posts' => BlogPost::latest()->get(),
+            'posts' => BlogPost::latest()->paginate(1),
         ]);
     }
 }
