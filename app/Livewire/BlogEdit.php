@@ -46,6 +46,8 @@ class BlogEdit extends Component
         ]);
 
         session()->flash('message', 'Blog post updated successfully.');
+         $this->reset(['title', 'content']);
+       return redirect()->route('blog.index');
     }
 
     public function render()
