@@ -3,6 +3,9 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('JQ DEV') }}
         </h2>
+        <div class="mb-10">
+            <a href="{{ route('blog.create') }}" class="btn btn-primary mb-5">Create New Post</a>
+        </div>
     </x-slot>
 
     <div class="py-12">
