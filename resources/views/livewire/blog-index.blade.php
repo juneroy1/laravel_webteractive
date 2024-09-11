@@ -1,7 +1,7 @@
 <div class="max-w-7xl mx-auto p-6 bg-gray-50">
     <!-- <h1 class="text-3xl font-bold mb-6">All Blog Posts</h1> -->
 
-    <h1 class="text-black font-bold mb-4">LATEST</h1>
+   <h2 class="text-4xl font-bold mb-2">LATEST</h2>
 
     @if (session()->has('message'))
     <div class="bg-green-700 text-black p-4 rounded mb-6">
