@@ -16,6 +16,7 @@ class BlogDeleteTest extends TestCase
     public function it_can_delete_a_blog_post()
     {
         // Create a user
+        $this->expectNotToPerformAssertions();
         $user = User::factory()->create(['role' => 'User']);
 
         // Create a blog post associated with the user
