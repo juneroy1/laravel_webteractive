@@ -11,6 +11,11 @@ class BlogDelete extends Component
     public function deletePost()
     {
         $post = BlogPost::findOrFail($this->postId);
+
+        if (auth()->user()->cannot('update', $post)) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $post->delete();
 
         session()->flash('message', 'Blog post deleted successfully.');
