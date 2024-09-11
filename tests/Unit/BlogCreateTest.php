@@ -7,6 +7,7 @@ use Tests\TestCase;
 use Livewire\Livewire;
 use App\Models\BlogPost;
 use App\Livewire\BlogCreate;
+use App\Livewire\BlogEdit;
 use App\Models\User;
 
 class BlogCreateTest extends TestCase
@@ -42,5 +43,7 @@ class BlogCreateTest extends TestCase
 
         $this->assertDatabaseHas('blog_posts', ['title' => 'User Blog Post']);
     }
+
+    
 }
 
