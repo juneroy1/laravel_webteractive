@@ -4,11 +4,12 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\BlogPost;
+use Livewire\WithPagination;
 class BlogIndex extends Component
 {
     // this was working before a listeners
     // protected $listeners = ['postDeleted' => 'render'];
-   
+    use WithPagination;
     public function render()
     {
         $posts = [];
