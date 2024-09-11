@@ -18,7 +18,13 @@ class BlogEdit extends Component
 
     public function mount($id)
     {
+        
         $post = BlogPost::findOrFail($id);
+
+        if (auth()->user()->cannot('update', $post)) {
+            abort(403, 'Unauthorized action.');
+        }
+
         $this->postId = $post->id;
         $this->title = $post->title;
         $this->content = $post->content;
