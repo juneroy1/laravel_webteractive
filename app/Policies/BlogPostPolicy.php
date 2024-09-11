@@ -8,11 +8,15 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 
 class BlogPostPolicy
 {
-    /**
-     * Create a new policy instance.
-     */
-    public function __construct()
+    use HandlesAuthorization;
+
+    public function update(User $user, BlogPost $post)
     {
-        //
+        return $user->isAdmin() || $user->id === $post->user_id;
+    }
+
+    public function delete(User $user, BlogPost $post)
+    {
+        return $user->isAdmin() || $user->id === $post->user_id;
     }
 }
