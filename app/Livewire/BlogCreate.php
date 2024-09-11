@@ -28,7 +28,7 @@ class BlogCreate extends Component
         session()->flash('message', 'Blog post created successfully.');
 
         $this->reset(['title', 'content']);
-       return redirect()->route('blog.index');
+       return redirect()->route('blog.main');
     }
 
     

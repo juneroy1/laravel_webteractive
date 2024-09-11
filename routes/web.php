@@ -22,7 +22,7 @@ Route::middleware([
     })->name('dashboard');
     Route::get('/', function () {
         return view('dashboard');
-    })->name('blog.index');
+    })->name('blog.main');
     Route::get('/blogs', BlogIndex::class)->name('blog.index');
     Route::get('/blogs/create', BlogCreate::class)->name('blog.create');
     Route::get('/blogs/{id}/edit', BlogEdit::class)->name('blog.edit');
