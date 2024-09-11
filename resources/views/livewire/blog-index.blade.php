@@ -1,13 +1,16 @@
 <div class="container mx-auto p-4">
     <!-- <h1 class="text-3xl font-bold mb-6">All Blog Posts</h1> -->
 
+   
+    <h1 class="text-black font-bold mb-4">LATEST</h1>
+    <a href="{{ route('blog.create') }}" class="btn btn-primary">Create New</a>
+
     @if (session()->has('message'))
-    <div class="bg-green-500 text-white p-4 rounded mb-6">
+    <div class="bg-green-700 text-black p-4 rounded mb-6">
         {{ session("message") }}
     </div>
     @endif
-    <h1 class="text-black font-bold mb-4">LATEST</h1>
-    <a href="{{ route('blog.create') }}" class="btn btn-primary">Create New</a>
+    
     @foreach($posts as $post)
     <div class="bg-white shadow-md rounded-lg p-6 mb-4">
         <h2 class="text-3xl font-bold mb-2">
