@@ -9,6 +9,11 @@
                  <livewire:vote :post="$post" :key="$post->id" />
             </div>
         <p class="text-gray-700">{{ $post->content }}</p>
+         <img
+            src="{{ $post->image_url ?? 'https://www.fond.co/wp-content/uploads/2019/10/3-sample-employee-recognition-programs-768x566.jpg' }}"
+            alt="{{ $post->title }}"
+            class="object-cover h-full w-full rounded-t-lg md:rounded-l-lg md:rounded-t-none"
+        />
         <div class="flex space-x-2">
             <a
                 href="{{ route('blog.edit', $post->id) }}"
