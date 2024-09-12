@@ -19,6 +19,15 @@
             <textarea id="content" wire:model="content" class="w-full p-2 border border-gray-300 rounded" placeholder="Enter the content" rows="5"></textarea>
             @error('content') <span class="text-red-500">{{ $message }}</span> @enderror
         </div>
+        <!-- Existing Image Display -->
+        @if($existingImage)
+            <img src="{{ Storage::url($existingImage) }}" alt="Existing Image" style="max-width: 200px;">
+        @endif
+
+        <!-- Image input -->
+        <input type="file" wire:model="image">
+        
+        @error('image') <span class="error">{{ $message }}</span> @enderror
 
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Update Post</button>
     </form>
