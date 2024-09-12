@@ -26,13 +26,17 @@
             class="object-cover h-full w-full rounded-t-lg md:rounded-l-lg md:rounded-t-none"
         />
         <div class="flex space-x-2">
+            @if(auth()->user()->can('update', $post))
             <a
                 href="{{ route('blog.edit', $post->id) }}"
                 class="text-black px-0 py-2 rounded"
             >
                 Edit Post
             </a>
+            @endif
+            @if(auth()->user()->can('delete', $post))
             <livewire:blog-delete :postId="$post->id"  />
+            @endif
         </div>
         <!-- <p class="text-sm text-gray-500 mt-4">Posted on: {{ $post->created_at->format('M d, Y') }}</p> -->
         <a
