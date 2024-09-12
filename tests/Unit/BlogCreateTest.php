@@ -24,7 +24,7 @@ class BlogCreateTest extends TestCase
             ->set('title', 'Test Blog Post')
             ->set('content', 'This is a test blog post.')
             ->call('createPost')
-            ->assertRedirect(route('blog.index'));
+            ->assertRedirect(route('blog.main'));
 
         $this->assertDatabaseHas('blog_posts', ['title' => 'Test Blog Post']);
     }
@@ -39,7 +39,7 @@ class BlogCreateTest extends TestCase
             ->set('title', 'User Blog Post')
             ->set('content', 'This is a User blog post.')
             ->call('createPost')
-            ->assertRedirect(route('blog.index'));
+            ->assertRedirect(route('blog.main'));
 
         $this->assertDatabaseHas('blog_posts', ['title' => 'User Blog Post']);
     }
