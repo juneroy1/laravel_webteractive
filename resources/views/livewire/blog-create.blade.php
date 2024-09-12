@@ -20,6 +20,11 @@
             @error('content') <span class="text-red-500">{{ $message }}</span> @enderror
         </div>
 
+        <!-- Image input -->
+        <input type="file" wire:model="image">
+        
+        @error('image') <span class="error">{{ $message }}</span> @enderror
+
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Create Post</button>
     </form>
 </div>
