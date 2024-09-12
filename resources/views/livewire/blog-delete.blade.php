@@ -1,6 +1,6 @@
-<div>
+<div class="flex justify-center items-center">
     <!-- <button wire:click="deletePost" class="btn btn-danger">Delete Post</button> -->
-    <form wire:submit.prevent="deletePost">
+    <form wire:submit.prevent="deletePost" >
         <button type="submit" class="btn btn-primary">Delete Post</button>
     </form>
     <script>
