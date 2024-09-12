@@ -21,10 +21,10 @@ class BlogDelete extends Component
         session()->flash('message', 'Blog post deleted successfully.');
 
         // Emit an event to refresh the post list in the parent component
-        $this->dispatch('postDeleted');
+        // $this->dispatch('postDeleted');
 
         // uncomment this one if you want to use this
-        // return redirect()->route('blog.index');
+        return redirect()->route('blog.main');
     }
 
     public function mount($postId)
