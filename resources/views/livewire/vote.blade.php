@@ -5,7 +5,7 @@
 
     <p>Total Votes: {{ $upvotes - $downvotes }}</p> -->
     <div class="flex items-center text-gray-500 text-sm">
-    <div class="flex items-center mr-6">
+    <div class="flex items-center mr-2">
          <button wire:click="upvote" class="btn btn-success">
             <div class="flex">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

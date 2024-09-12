@@ -8,7 +8,7 @@
         {{ session("message") }}
     </div>
     @endif @foreach($posts as $post)
-    <div class="flex flex-row md:flex-col bg-white shadow-lg rounded-lg mb-6">
+    <div class="flex flex-col md:flex-row bg-white shadow-lg rounded-lg mb-6">
         <!-- Blog Image -->
         <div class="md:w-1/3 w-full">
             <a
