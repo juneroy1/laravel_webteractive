@@ -1,3 +1,38 @@
+## HOW TO INSTALL THIS APP
+- install herd https://herd.laravel.com/docs/1/getting-started/about-herd
+- make sure this repo is inside the Herd folder
+- check the node version in  your local - the version i used is v16.20.2
+- run composer install
+- run npm install
+- create env file
+- update db connection similar below
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3307
+DB_DATABASE=laravel_webteractive
+DB_USERNAME=root
+DB_PASSWORD=
+
+- just incase run php artisan key:generate
+- next run php artisan migrate
+
+- if you are in the Herd file you dont need to run the command php artisan serve
+- just run this command npm run dev
+
+## WHY IS CHOSE MYSQL?
+although we can implement this in any type of sql like nosql, postgresql but i am more fan and veteran since i used this since i was in college on using mysql so to make it fast, i chose MYSQL
+
+## TO GENERATE ADMIN
+- just run php artisan db:seed --class=AdminUserSeeder
+- and it will create an account below
+email = admin@example.com 
+password = password
+
+## HOW TO RUN PHP UNIT TEST?
+- just run the command php artisan test and it will test all the pages and components i created
+- php artisan make:test --filter CLASSNAME
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
