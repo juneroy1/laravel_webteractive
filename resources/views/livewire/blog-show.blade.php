@@ -32,6 +32,7 @@
             >
                 Edit Post
             </a>
+            <livewire:blog-delete :postId="$post->id"  />
         </div>
         <!-- <p class="text-sm text-gray-500 mt-4">Posted on: {{ $post->created_at->format('M d, Y') }}</p> -->
         <a
