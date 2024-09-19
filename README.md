@@ -21,6 +21,9 @@ DB_PASSWORD=
 
 ## WHY IS CHOSE MYSQL?
 although we can implement this in any type of sql like nosql, postgresql but i am more fan and veteran since i used this since i was in college on using mysql so to make it fast, i chose MYSQL
+## connect storage to public
+JUST RUN THIS -- php artisan storage:link
+
 
 ## TO GENERATE ADMIN
 - just run php artisan db:seed --class=AdminUserSeeder
